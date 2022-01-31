@@ -1,0 +1,1235 @@
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');*/
+
+body, div, i, row, c {
+	box-sizing: border-box;
+}
+body {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #6B6B8B;
+	background: #E8EAF6;
+	cursor: default;
+}
+a {
+	color: inherit;
+	text-decoration: none;	
+}
+
+
+/* Флекс-Таблица */
+table-flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	margin: 20px;
+	margin-left: 40px !important;
+	margin-top: 5px !important;
+	padding-top: 41px;
+}
+table-head,
+row {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+}
+table-head {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 6px 20px 0 40px;
+	background: #E8EAF6;
+	/*box-shadow: 0 1px 8px 2px #e8eaf6;*/
+	z-index: 10;
+}
+table-head c {
+	position: relative;
+	padding-bottom: 15px;
+	font-size: 13px;
+	text-shadow: 0 0 1px rgba(65, 105, 225, .7);
+	color: dodgerblue;
+	user-select: none;
+}
+
+rows-wrap {
+	position: relative;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	box-shadow: 1px 3px 7px 0 rgba(0, 0, 0, .09);
+	border: 1px solid #DDD;
+	border-radius: 6px;
+	/*overflow: hidden;*/
+}
+ rows-wrap::before {
+	position: absolute;
+	top: 0;
+	left: -30px;
+	content: '1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 10\A 11\A 12\A 13\A 14\A 15\A 16\A 17\A 18\A 19\A 20\A 21\A 22\A 23\A 24\A 25\A 26\A 27\A 28\A 29\A 30\A 31\A 32\A 33\A 34\A 35\A 36\A 37\A 38\A 39\A 40\A 41\A 42\A 43\A 44\A 45\A 46\A 47\A 48\A 49\A 50\A 51\A 52\A 53\A 54\A 55\A 56\A 57\A 58\A 59\A 60\A 61\A 62\A 63\A 64\A 65\A 66\A 67\A 68\A 69\A 70\A 71\A 72\A 73\A 74\A 75\A 76\A 77\A 78\A 79\A 80\A 81\A 82\A 83\A 84\A 85\A 86\A 87\A 88\A 89\A 90\A 91\A 92\A 93\A 94\A 95\A 96\A 97\A 98\A 99\A 100\A 101\A 102\A 103\A 104\A 105\A 106\A 107\A 108\A 109\A 110\A 111\A 112\A 113\A 114\A 115\A 116\A 117\A 118\A 119\A 120\A 121\A 122\A 123\A 124\A 125\A 126\A 127\A 128\A 129\A 130\A 131\A 132\A 133\A 134\A 135\A 136\A 137\A 138\A 139\A 140\A 141\A 142\A 143\A 144\A 145\A 146\A 147\A 148\A 149\A 150\A 151\A 152\A 153\A 154\A 155\A 156\A 157\A 158\A 159\A 160\A 161\A 162\A 163\A 164\A 165\A 166\A 167\A 168\A 169\A 170\A 171\A 172\A 173\A 174\A 175\A 176\A 177\A 178\A 179\A 180\A 181\A 182\A 183\A 184\A 185\A 186\A 187\A 188\A 189\A 190\A 191\A 192\A 193\A 194\A 195\A 196\A 197\A 198\A 199\A 200\A 201\A 202\A 203\A 204\A 205\A 206\A 207\A 208\A 209\A 210\A 211\A 212\A 213\A 214\A 215\A 216\A 217\A 218\A 219\A 220\A 221\A 222\A 223\A 224\A 225\A 226\A 227\A 228\A 229\A 230\A 231\A 232\A 233\A 234\A 235\A 236\A 237\A 238\A 239\A 240\A 241\A 242\A 243\A 244';
+	width: 18px;
+	margin: 1px 16px 0 0;
+	color: #AAA;
+	font-size: 12px;
+	line-height: 37px;
+	text-align: center;
+	white-space: pre;
+} 
+rows-wrap::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: snow;
+	z-index: -1;
+}
+row {
+	/*background: snow;*/
+	border-top: 1px solid #F3F3F3;
+	border-bottom: 1px solid #F3F3F3;
+	margin-top: -1px;
+	transition: background .1s, border-color .1s;
+}
+
+/*	 Ячейки	*/
+c {
+	padding: 9px 12px 11px;
+	line-height: 1;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+c:nth-child(1) {
+	width: 33%;
+	padding-left: 18px;
+	padding-right: 0;
+	overflow: hidden;
+}
+c:nth-child(2) {
+	width: 25%;
+	overflow: hidden;
+}
+c:nth-child(3) {
+	width: 14%;
+	min-width: 115px;
+}
+c:nth-child(4) {
+	width: 14%;
+	min-width: 128px;
+	text-align: right;
+}
+c:nth-child(5) {
+	width: 14%;
+	min-width: 124px;
+	text-align: right;
+}
+c:last-child { padding-right: 18px; }
+
+/*		Крайние строки		*/
+.AUS { border-top-color: rgba(0,0,0,0); }
+
+.s.Z .AUS,
+.s.Z .AUS:hover,
+.JPN,
+.JPN:hover { border-bottom-color: rgba(0,0,0,0); }
+
+.AUS c { padding-top: 11px; }
+.JPN c { padding-bottom: 13px; }
+row:hover {
+	/*background: #F7F3F3;*/
+	background: #FDF3D8;
+	border-color: #FBEABB;
+	z-index: 1;
+}
+
+
+/* Сортировка строк */
+table-head span { cursor: pointer; }
+table-head span::after {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 12px;
+	margin: 0 0 -1px 5px;
+	background: url('icon--sort.svg') 3px 0/cover no-repeat;
+}
+.s #strana span,
+.o #stolica span,
+.c #continent span,
+.n #naselenie span,
+.t #terra span {
+	color: tomato;
+	text-shadow: 0 0 1px rgba(255, 99, 71, .64);
+}
+
+.s #strana span::after,
+.o #stolica span::after,
+.c #continent span::after,
+.n #naselenie span::after,
+.t #terra span::after {
+	width: 16px;
+	background-position: 95% -50%;
+	background-size: auto 150%;
+}
+
+.s.Z #strana span::after,
+.o.Z #stolica span::after,
+.c.Z #continent span::after,
+.n.Z #naselenie span::after,
+.t.Z #terra span::after {
+	transform: rotate(180deg);
+	background-position: 95% -25%;
+}
+
+/*	Страна (Я-А)	*/
+.s.Z .AUS c {
+	padding-top: 9px;
+	padding-bottom: 13px;
+}
+.s.Z .JPN { border-bottom: 1px solid #F3F3F3; }
+.s.Z .JPN:hover { border-color: #FBEABB; }
+.s.Z .JPN c { padding-top: 11px; padding-bottom: 11px;}
+
+/*	Столица (А-Я)	*/
+	.o .ATA{order:1}
+	.o .HKG{order:2}
+	.o .MAC{order:3}
+	.o .UAE{order:4}
+	.o .NGA{order:5}
+	.o .COK{order:6}
+	.o .PCN{order:7}
+	.o .ETH{order:8}
+	.o .GHA{order:9}
+	.o .ALG{order:10}
+	.o .NIU{order:11}
+	.o .JOR{order:12}
+	.o .NED{order:13}
+	.o .AND{order:14}
+	.o .TUR{order:15}
+	.o .MAD{order:16}
+	.o .SAM{order:17}
+	.o .ERI{order:18}
+	.o .PAR{order:19}
+	.o .TKL{order:20}
+	.o .GRE{order:21}
+	.o .TKM{order:22}
+	.o .IRQ{order:23}
+	.o .AZE{order:24}
+	.o .MLI{order:25}
+	.o .CTA{order:26}
+	.o .THA{order:27}
+	.o .BRU{order:28}
+	.o .GAM{order:29}
+	.o .SKN{order:30}
+	.o .GPE{order:31}
+	.o .LIB{order:32}
+	.o .SRB{order:33}
+	.o .BLZ{order:34}
+	.o .GER{order:35}
+	.o .SUI{order:36}
+	.o .GNB{order:37}
+	.o .KGZ{order:38}
+	.o .COL{order:39}
+	.o .CGO{order:40}
+	.o .BRA{order:41}
+	.o .SVK{order:42}
+	.o .BRB{order:43}
+	.o .BEL{order:44}
+	.o .HUN{order:45}
+	.o .BDI{order:46}
+	.o .ROU{order:47}
+	.o .ARG{order:48}
+	.o .LIE{order:49}
+	.o .MLT{order:50}
+	.o .AIA{order:51}
+	.o .POL{order:52}
+	.o .VAT{order:53}
+	.o .USA{order:54}
+	.o .NZL{order:55}
+	.o .AUT{order:56}
+	.o .SEY{order:57}
+	.o .CUW{order:58}
+	.o .LTU{order:59}
+	.o .NAM{order:60}
+	.o .LAO{order:61}
+	.o .BOT{order:62}
+	.o .CUB{order:63}
+	.o .BER{order:64}
+	.o .GUA{order:65}
+	.o .GIB{order:66}
+	.o .BLM{order:67}
+	.o .SEN{order:68}
+	.o .BAN{order:69}
+	.o .SYR{order:70}
+	.o .IND{order:71}
+	.o .IDN{order:72}
+	.o .SHN{order:73}
+	.o .DJI{order:74}
+	.o .CAY{order:75}
+	.o .GUY{order:76}
+	.o .SSD{order:77}
+	.o .TLS{order:78}
+	.o .TAN{order:79}
+	.o .QAT{order:80}
+	.o .IRL{order:81}
+	.o .IMN{order:82}
+	.o .TJK{order:83}
+	.o .ARM{order:84}
+	.o .CRO{order:85}
+	.o .ISR{order:86}
+	.o .PAK{order:87}
+	.o .AFG{order:88}
+	.o .EGY{order:89}
+	.o .GYF{order:90}
+	.o .UGA{order:91}
+	.o .AUS{order:92}
+	.o .VEN{order:93}
+	.o .LCA{order:94}
+	.o .NEP{order:95}
+	.o .RWA{order:96}
+	.o .UKR{order:97}
+	.o .VIN{order:98}
+	.o .JAM{order:99}
+	.o .COD{order:100}
+	.o .ECU{order:101}
+	.o .MDA{order:102}
+	.o .TCA{order:103}
+	.o .GUI{order:104}
+	.o .DEN{order:105}
+	.o .BES{order:106}
+	.o .MAS{order:107}
+	.o .GAB{order:108}
+	.o .MWI{order:109}
+	.o .PER{order:110}
+	.o .POR{order:111}
+	.o .TOG{order:112}
+	.o .GBR{order:113}
+	.o .ANG{order:114}
+	.o .ZAM{order:115}
+	.o .SVN{order:116}
+	.o .LUX{order:117}
+	.o .MHL{order:118}
+	.o .ESP{order:119}
+	.o .EQG{order:120}
+	.o .MDV{order:121}
+	.o .MYT{order:122}
+	.o .NCA{order:123}
+	.o .BHR{order:124}
+	.o .PHI{order:125}
+	.o .MOZ{order:126}
+	.o .SMT{order:127}
+	.o .ALA{order:128}
+	.o .LES{order:129}
+	.o .OMA{order:130}
+	.o .WLF{order:131}
+	.o .SWZ{order:132}
+	.o .MEX{order:133}
+	.o .BLR{order:134}
+	.o .SOM{order:135}
+	.o .MCO{order:136}
+	.o .LBR{order:137}
+	.o .URU{order:138}
+	.o .COM{order:139}
+	.o .RUS{order:140}
+	.o .KEN{order:141}
+	.o .BAH{order:142}
+	.o .PLW{order:143}
+	.o .CHA{order:144}
+	.o .MYA{order:145}
+	.o .NIG{order:146}
+	.o .CYP{order:147}
+	.o .NCP{order:148}
+	.o .MTN{order:149}
+	.o .TGA{order:150}
+	.o .NCL{order:151}
+	.o .KAZ{order:152}
+	.o .GRL{order:153}
+	.o .ARU{order:154}
+	.o .NOR{order:155}
+	.o .CAN{order:156}
+	.o .ASA{order:157}
+	.o .FSM{order:158}
+	.o .PAN{order:159}
+	.o .TAH{order:160}
+	.o .SUR{order:161}
+	.o .FRA{order:162}
+	.o .CHN{order:163}
+	.o .MSR{order:164}
+	.o .CAM{order:165}
+	.o .MNE{order:166}
+	.o .VAN{order:167}
+	.o .MRI{order:168}
+	.o .PNG{order:169}
+	.o .BEN{order:170}
+	.o .HAI{order:171}
+	.o .TRI{order:172}
+	.o .CZE{order:173}
+	.o .CPV{order:174}
+	.o .RSA{order:175}
+	.o .KVX{order:176}
+	.o .PRK{order:177}
+	.o .MAR{order:178}
+	.o .PLE{order:179}
+	.o .ISL{order:180}
+	.o .LVA{order:181}
+	.o .ITA{order:182}
+	.o .VGB{order:183}
+	.o .DMA{order:184}
+	.o .NMI{order:185}
+	.o .YEM{order:186}
+	.o .SMR{order:187}
+	.o .SLV{order:188}
+	.o .DOM{order:189}
+	.o .STP{order:190}
+	.o .CHI{order:191}
+	.o .CRC{order:192}
+	.o .PUR{order:193}
+	.o .BIH{order:194}
+	.o .REU{order:195}
+	.o .SPM{order:196}
+	.o .ATG{order:197}
+	.o .GRN{order:198}
+	.o .GGY{order:199}
+	.o .JEY{order:200}
+	.o .KOR{order:201}
+	.o .SIN{order:202}
+	.o .MKD{order:203}
+	.o .BUL{order:204}
+	.o .SWE{order:205}
+	.o .FLK{order:206}
+	.o .FIJ{order:207}
+	.o .BOL{order:208}
+	.o .ABH{order:209}
+	.o .TPE{order:210}
+	.o .EST{order:211}
+	.o .UZB{order:212}
+	.o .GEO{order:213}
+	.o .IRN{order:214}
+	.o .HON{order:215}
+	.o .ALB{order:216}
+	.o .RMN{order:217}
+	.o .JPN{order:218}
+	.o .FRO{order:219}
+	.o .LBY{order:220}
+	.o .TUN{order:221}
+	.o .BHU{order:222}
+	.o .BFA{order:223}
+	.o .MGL{order:224}
+	.o .SXM{order:225}
+	.o .MTQ{order:226}
+	.o .SLE{order:227}
+	.o .TUV{order:228}
+	.o .GUM{order:229}
+	.o .VIE{order:230}
+	.o .ZIM{order:231}
+	.o .SUD{order:232}
+	.o .FIN{order:233}
+	.o .SOL{order:234}
+	.o .OSE{order:235}
+	.o .VIR{order:236}
+	.o .SRI{order:237}
+	.o .SAH{order:238}
+	.o .KUW{order:239}
+	.o .KSA{order:240}
+	.o .KIR{order:241}
+	.o .CIV{order:242}
+	.o .NRU{order:243}
+	.o .CMR{order:244}
+
+/*	Часть света (А-Я)	*/
+	.c .AUS{order:1}
+	.c .AZE{order:2}
+	.c .ARM{order:3}
+	.c .AFG{order:4}
+	.c .BAN{order:5}
+	.c .BHR{order:6}
+	.c .BRU{order:7}
+	.c .BHU{order:8}
+	.c .TLS{order:9}
+	.c .VIE{order:10}
+	.c .HKG{order:11}
+	.c .GEO{order:12}
+	.c .ISR{order:13}
+	.c .IND{order:14}
+	.c .IDN{order:15}
+	.c .JOR{order:16}
+	.c .IRQ{order:17}
+	.c .IRN{order:18}
+	.c .YEM{order:19}
+	.c .KAZ{order:20}
+	.c .CAM{order:21}
+	.c .QAT{order:22}
+	.c .KGZ{order:23}
+	.c .CHN{order:24}
+	.c .PRK{order:25}
+	.c .KUW{order:26}
+	.c .LAO{order:27}
+	.c .LIB{order:28}
+	.c .MAC{order:29}
+	.c .MAS{order:30}
+	.c .MDV{order:31}
+	.c .MGL{order:32}
+	.c .MYA{order:33}
+	.c .NEP{order:34}
+	.c .UAE{order:35}
+	.c .OMA{order:36}
+	.c .PAK{order:37}
+	.c .PLE{order:38}
+	.c .ABH{order:39}
+	.c .KOR{order:40}
+	.c .KSA{order:41}
+	.c .SIN{order:42}
+	.c .SYR{order:43}
+	.c .TJK{order:44}
+	.c .THA{order:45}
+	.c .TPE{order:46}
+	.c .NCP{order:47}
+	.c .TKM{order:48}
+	.c .TUR{order:49}
+	.c .UZB{order:50}
+	.c .PHI{order:51}
+	.c .SRI{order:52}
+	.c .OSE{order:53}
+	.c .JPN{order:54}
+	.c .AIA{order:55}
+	.c .ATG{order:56}
+	.c .ARG{order:57}
+	.c .ARU{order:58}
+	.c .BAH{order:59}
+	.c .BRB{order:60}
+	.c .BLZ{order:61}
+	.c .BER{order:62}
+	.c .BOL{order:63}
+	.c .BES{order:64}
+	.c .BRA{order:65}
+	.c .VEN{order:66}
+	.c .VGB{order:67}
+	.c .VIR{order:68}
+	.c .HAI{order:69}
+	.c .GUY{order:70}
+	.c .GPE{order:71}
+	.c .GUA{order:72}
+	.c .HON{order:73}
+	.c .GRN{order:74}
+	.c .GRL{order:75}
+	.c .DMA{order:76}
+	.c .DOM{order:77}
+	.c .CAN{order:78}
+	.c .COL{order:79}
+	.c .CRC{order:80}
+	.c .CUB{order:81}
+	.c .CUW{order:82}
+	.c .MTQ{order:83}
+	.c .MEX{order:84}
+	.c .MSR{order:85}
+	.c .NCA{order:86}
+	.c .CAY{order:87}
+	.c .PAN{order:88}
+	.c .PAR{order:89}
+	.c .PER{order:90}
+	.c .PUR{order:91}
+	.c .SLV{order:92}
+	.c .BLM{order:93}
+	.c .SMT{order:94}
+	.c .SPM{order:95}
+	.c .VIN{order:96}
+	.c .SKN{order:97}
+	.c .LCA{order:98}
+	.c .SXM{order:99}
+	.c .USA{order:100}
+	.c .SUR{order:101}
+	.c .TCA{order:102}
+	.c .TRI{order:103}
+	.c .URU{order:104}
+	.c .FLK{order:105}
+	.c .GYF{order:106}
+	.c .CHI{order:107}
+	.c .ECU{order:108}
+	.c .JAM{order:109}
+	.c .ATA{order:110}
+	.c .ALG{order:111}
+	.c .ANG{order:112}
+	.c .BEN{order:113}
+	.c .BOT{order:114}
+	.c .BFA{order:115}
+	.c .BDI{order:116}
+	.c .GAB{order:117}
+	.c .GAM{order:118}
+	.c .GHA{order:119}
+	.c .GUI{order:120}
+	.c .GNB{order:121}
+	.c .COD{order:122}
+	.c .DJI{order:123}
+	.c .EGY{order:124}
+	.c .ZAM{order:125}
+	.c .SAH{order:126}
+	.c .ZIM{order:127}
+	.c .CPV{order:128}
+	.c .CMR{order:129}
+	.c .KEN{order:130}
+	.c .COM{order:131}
+	.c .CGO{order:132}
+	.c .CIV{order:133}
+	.c .LES{order:134}
+	.c .LBR{order:135}
+	.c .LBY{order:136}
+	.c .MRI{order:137}
+	.c .MTN{order:138}
+	.c .MAD{order:139}
+	.c .MYT{order:140}
+	.c .MWI{order:141}
+	.c .MLI{order:142}
+	.c .MAR{order:143}
+	.c .MOZ{order:144}
+	.c .NAM{order:145}
+	.c .NIG{order:146}
+	.c .NGA{order:147}
+	.c .SHN{order:148}
+	.c .REU{order:149}
+	.c .RWA{order:150}
+	.c .STP{order:151}
+	.c .SWZ{order:152}
+	.c .SEY{order:153}
+	.c .SEN{order:154}
+	.c .SOM{order:155}
+	.c .SUD{order:156}
+	.c .SLE{order:157}
+	.c .TAN{order:158}
+	.c .TOG{order:159}
+	.c .TUN{order:160}
+	.c .UGA{order:161}
+	.c .CTA{order:162}
+	.c .CHA{order:163}
+	.c .EQG{order:164}
+	.c .ERI{order:165}
+	.c .ETH{order:166}
+	.c .RSA{order:167}
+	.c .SSD{order:168}
+	.c .AUT{order:169}
+	.c .ALA{order:170}
+	.c .ALB{order:171}
+	.c .AND{order:172}
+	.c .BLR{order:173}
+	.c .BEL{order:174}
+	.c .BUL{order:175}
+	.c .BIH{order:176}
+	.c .VAT{order:177}
+	.c .GBR{order:178}
+	.c .HUN{order:179}
+	.c .GER{order:180}
+	.c .GGY{order:181}
+	.c .GIB{order:182}
+	.c .GRE{order:183}
+	.c .DEN{order:184}
+	.c .JEY{order:185}
+	.c .IRL{order:186}
+	.c .ISL{order:187}
+	.c .ESP{order:188}
+	.c .ITA{order:189}
+	.c .CYP{order:190}
+	.c .LVA{order:191}
+	.c .LTU{order:192}
+	.c .LIE{order:193}
+	.c .LUX{order:194}
+	.c .MKD{order:195}
+	.c .MLT{order:196}
+	.c .MDA{order:197}
+	.c .MCO{order:198}
+	.c .NED{order:199}
+	.c .NOR{order:200}
+	.c .IMN{order:201}
+	.c .POL{order:202}
+	.c .POR{order:203}
+	.c .RMN{order:204}
+	.c .KVX{order:205}
+	.c .RUS{order:206}
+	.c .ROU{order:207}
+	.c .SMR{order:208}
+	.c .SRB{order:209}
+	.c .SVK{order:210}
+	.c .SVN{order:211}
+	.c .UKR{order:212}
+	.c .FRO{order:213}
+	.c .FIN{order:214}
+	.c .FRA{order:215}
+	.c .CRO{order:216}
+	.c .MNE{order:217}
+	.c .CZE{order:218}
+	.c .SUI{order:219}
+	.c .SWE{order:220}
+	.c .EST{order:221}
+	.c .ASA{order:222}
+	.c .VAN{order:223}
+	.c .GUM{order:224}
+	.c .KIR{order:225}
+	.c .MHL{order:226}
+	.c .NRU{order:227}
+	.c .NIU{order:228}
+	.c .NZL{order:229}
+	.c .NCL{order:230}
+	.c .COK{order:231}
+	.c .PCN{order:232}
+	.c .PLW{order:233}
+	.c .PNG{order:234}
+	.c .SAM{order:235}
+	.c .NMI{order:236}
+	.c .SOL{order:237}
+	.c .TKL{order:238}
+	.c .TGA{order:239}
+	.c .TUV{order:240}
+	.c .WLF{order:241}
+	.c .FSM{order:242}
+	.c .FIJ{order:243}
+	.c .TAH{order:244}
+
+/*	Население (А-Я)	*/
+	.n .ATA{order:1}
+	.n .PCN{order:2}
+	.n .NIU{order:3}
+	.n .VAT{order:4}
+	.n .TKL{order:5}
+	.n .MSR{order:6}
+	.n .FLK{order:7}
+	.n .SPM{order:8}
+	.n .SHN{order:9}
+	.n .WLF{order:10}
+	.n .TUV{order:11}
+	.n .NRU{order:12}
+	.n .AIA{order:13}
+	.n .BLM{order:14}
+	.n .COK{order:15}
+	.n .PLW{order:16}
+	.n .BES{order:17}
+	.n .ALA{order:18}
+	.n .SMR{order:19}
+	.n .VGB{order:20}
+	.n .TCA{order:21}
+	.n .GIB{order:22}
+	.n .SMT{order:23}
+	.n .SXM{order:24}
+	.n .LIE{order:25}
+	.n .MCO{order:26}
+	.n .FRO{order:27}
+	.n .MHL{order:28}
+	.n .OSE{order:29}
+	.n .NMI{order:30}
+	.n .ASA{order:31}
+	.n .SKN{order:32}
+	.n .GRL{order:33}
+	.n .CAY{order:34}
+	.n .BER{order:35}
+	.n .GGY{order:36}
+	.n .DMA{order:37}
+	.n .AND{order:38}
+	.n .IMN{order:39}
+	.n .ATG{order:40}
+	.n .SEY{order:41}
+	.n .JEY{order:42}
+	.n .ARU{order:43}
+	.n .FSM{order:44}
+	.n .VIR{order:45}
+	.n .TGA{order:46}
+	.n .GRN{order:47}
+	.n .VIN{order:48}
+	.n .KIR{order:49}
+	.n .CUW{order:50}
+	.n .GUM{order:51}
+	.n .LCA{order:52}
+	.n .STP{order:53}
+	.n .SAM{order:54}
+	.n .ABH{order:55}
+	.n .MYT{order:56}
+	.n .GYF{order:57}
+	.n .NCL{order:58}
+	.n .VAN{order:59}
+	.n .BRB{order:60}
+	.n .TAH{order:61}
+	.n .NCP{order:62}
+	.n .ISL{order:63}
+	.n .MTQ{order:64}
+	.n .BLZ{order:65}
+	.n .BAH{order:66}
+	.n .MDV{order:67}
+	.n .GPE{order:68}
+	.n .BRU{order:69}
+	.n .MLT{order:70}
+	.n .RMN{order:71}
+	.n .CPV{order:72}
+	.n .SUR{order:73}
+	.n .SAH{order:74}
+	.n .LUX{order:75}
+	.n .SOL{order:76}
+	.n .MNE{order:77}
+	.n .MAC{order:78}
+	.n .BHU{order:79}
+	.n .GUY{order:80}
+	.n .COM{order:81}
+	.n .REU{order:82}
+	.n .CYP{order:83}
+	.n .FIJ{order:84}
+	.n .DJI{order:85}
+	.n .TLS{order:86}
+	.n .MRI{order:87}
+	.n .EQG{order:88}
+	.n .EST{order:89}
+	.n .TRI{order:90}
+	.n .SWZ{order:91}
+	.n .BHR{order:92}
+	.n .KVX{order:93}
+	.n .GNB{order:94}
+	.n .LVA{order:95}
+	.n .GAB{order:96}
+	.n .GAM{order:97}
+	.n .MKD{order:98}
+	.n .SVN{order:99}
+	.n .LES{order:100}
+	.n .QAT{order:101}
+	.n .BOT{order:102}
+	.n .NAM{order:103}
+	.n .LTU{order:104}
+	.n .ALB{order:105}
+	.n .JAM{order:106}
+	.n .ARM{order:107}
+	.n .MGL{order:108}
+	.n .PUR{order:109}
+	.n .URU{order:110}
+	.n .BIH{order:111}
+	.n .MDA{order:112}
+	.n .MTN{order:113}
+	.n .GEO{order:114}
+	.n .PAN{order:115}
+	.n .SOM{order:116}
+	.n .KUW{order:117}
+	.n .OMA{order:118}
+	.n .CRO{order:119}
+	.n .IRL{order:120}
+	.n .LBR{order:121}
+	.n .CGO{order:122}
+	.n .PLE{order:123}
+	.n .NZL{order:124}
+	.n .CRC{order:125}
+	.n .CTA{order:126}
+	.n .ERI{order:127}
+	.n .SVK{order:128}
+	.n .NOR{order:129}
+	.n .SIN{order:130}
+	.n .FIN{order:131}
+	.n .DEN{order:132}
+	.n .TKM{order:133}
+	.n .LIB{order:134}
+	.n .SLV{order:135}
+	.n .NCA{order:136}
+	.n .KGZ{order:137}
+	.n .LBY{order:138}
+	.n .SLE{order:139}
+	.n .LAO{order:140}
+	.n .BUL{order:141}
+	.n .PAR{order:142}
+	.n .SRB{order:143}
+	.n .JOR{order:144}
+	.n .HKG{order:145}
+	.n .TOG{order:146}
+	.n .PNG{order:147}
+	.n .SUI{order:148}
+	.n .HON{order:149}
+	.n .AUT{order:150}
+	.n .ISR{order:151}
+	.n .TJK{order:152}
+	.n .BLR{order:153}
+	.n .UAE{order:154}
+	.n .HUN{order:155}
+	.n .HAI{order:156}
+	.n .AZE{order:157}
+	.n .SWE{order:158}
+	.n .BEN{order:159}
+	.n .POR{order:160}
+	.n .CZE{order:161}
+	.n .DOM{order:162}
+	.n .GRE{order:163}
+	.n .TUN{order:164}
+	.n .CUB{order:165}
+	.n .BEL{order:166}
+	.n .RWA{order:167}
+	.n .ECU{order:168}
+	.n .NED{order:169}
+	.n .BOL{order:170}
+	.n .KAZ{order:171}
+	.n .CHI{order:172}
+	.n .ROU{order:173}
+	.n .SEN{order:174}
+	.n .SSD{order:175}
+	.n .GUI{order:176}
+	.n .CHA{order:177}
+	.n .BDI{order:178}
+	.n .TPE{order:179}
+	.n .CAM{order:180}
+	.n .GUA{order:181}
+	.n .ZIM{order:182}
+	.n .AUS{order:183}
+	.n .SRI{order:184}
+	.n .SYR{order:185}
+	.n .PRK{order:186}
+	.n .MOZ{order:187}
+	.n .GHA{order:188}
+	.n .ANG{order:189}
+	.n .CMR{order:190}
+	.n .MWI{order:191}
+	.n .PER{order:192}
+	.n .VEN{order:193}
+	.n .UZB{order:194}
+	.n .ZAM{order:195}
+	.n .MAR{order:196}
+	.n .CAN{order:197}
+	.n .AFG{order:198}
+	.n .BFA{order:199}
+	.n .MLI{order:200}
+	.n .POL{order:201}
+	.n .CIV{order:202}
+	.n .IRQ{order:203}
+	.n .NEP{order:204}
+	.n .SUD{order:205}
+	.n .MAS{order:206}
+	.n .UKR{order:207}
+	.n .ALG{order:208}
+	.n .KSA{order:209}
+	.n .NIG{order:210}
+	.n .MAD{order:211}
+	.n .UGA{order:212}
+	.n .ESP{order:213}
+	.n .YEM{order:214}
+	.n .COL{order:215}
+	.n .KEN{order:216}
+	.n .KOR{order:217}
+	.n .MYA{order:218}
+	.n .RSA{order:219}
+	.n .ARG{order:220}
+	.n .TAN{order:221}
+	.n .ITA{order:222}
+	.n .GBR{order:223}
+	.n .FRA{order:224}
+	.n .THA{order:225}
+	.n .TUR{order:226}
+	.n .IRN{order:227}
+	.n .COD{order:228}
+	.n .GER{order:229}
+	.n .VIE{order:230}
+	.n .EGY{order:231}
+	.n .PHI{order:232}
+	.n .ETH{order:233}
+	.n .JPN{order:234}
+	.n .MEX{order:235}
+	.n .RUS{order:236}
+	.n .BAN{order:237}
+	.n .NGA{order:238}
+	.n .BRA{order:239}
+	.n .PAK{order:240}
+	.n .IDN{order:241}
+	.n .USA{order:242}
+	.n .IND{order:243}
+	.n .CHN{order:244}
+
+/*	Площадь (А-Я)	*/
+	.t .VAT{order:1}
+	.t .MCO{order:2}
+	.t .GIB{order:3}
+	.t .TKL{order:4}
+	.t .NRU{order:5}
+	.t .BLM{order:6}
+	.t .TUV{order:7}
+	.t .MAC{order:8}
+	.t .SXM{order:9}
+	.t .PCN{order:10}
+	.t .SMT{order:11}
+	.t .BER{order:12}
+	.t .SMR{order:13}
+	.t .GGY{order:14}
+	.t .AIA{order:15}
+	.t .MSR{order:16}
+	.t .JEY{order:17}
+	.t .VGB{order:18}
+	.t .LIE{order:19}
+	.t .MHL{order:20}
+	.t .ARU{order:21}
+	.t .ASA{order:22}
+	.t .COK{order:23}
+	.t .SPM{order:24}
+	.t .NIU{order:25}
+	.t .SKN{order:26}
+	.t .CAY{order:27}
+	.t .WLF{order:28}
+	.t .MDV{order:29}
+	.t .MLT{order:30}
+	.t .BES{order:31}
+	.t .GRN{order:32}
+	.t .VIR{order:33}
+	.t .MYT{order:34}
+	.t .VIN{order:35}
+	.t .SHN{order:36}
+	.t .TCA{order:37}
+	.t .BRB{order:38}
+	.t .ATG{order:39}
+	.t .CUW{order:40}
+	.t .SEY{order:41}
+	.t .PLW{order:42}
+	.t .AND{order:43}
+	.t .NMI{order:44}
+	.t .GUM{order:45}
+	.t .IMN{order:46}
+	.t .LCA{order:47}
+	.t .BHR{order:48}
+	.t .FSM{order:49}
+	.t .KIR{order:50}
+	.t .TGA{order:51}
+	.t .DMA{order:52}
+	.t .SIN{order:53}
+	.t .STP{order:54}
+	.t .HKG{order:55}
+	.t .MTQ{order:56}
+	.t .FRO{order:57}
+	.t .ALA{order:58}
+	.t .GPE{order:59}
+	.t .COM{order:60}
+	.t .MRI{order:61}
+	.t .REU{order:62}
+	.t .LUX{order:63}
+	.t .SAM{order:64}
+	.t .NCP{order:65}
+	.t .OSE{order:66}
+	.t .CPV{order:67}
+	.t .RMN{order:68}
+	.t .TAH{order:69}
+	.t .TRI{order:70}
+	.t .BRU{order:71}
+	.t .CYP{order:72}
+	.t .PLE{order:73}
+	.t .ABH{order:74}
+	.t .PUR{order:75}
+	.t .LIB{order:76}
+	.t .KVX{order:77}
+	.t .JAM{order:78}
+	.t .GAM{order:79}
+	.t .QAT{order:80}
+	.t .FLK{order:81}
+	.t .VAN{order:82}
+	.t .BAH{order:83}
+	.t .MNE{order:84}
+	.t .TLS{order:85}
+	.t .SWZ{order:86}
+	.t .KUW{order:87}
+	.t .FIJ{order:88}
+	.t .NCL{order:89}
+	.t .SVN{order:90}
+	.t .SLV{order:91}
+	.t .DJI{order:92}
+	.t .ISR{order:93}
+	.t .BLZ{order:94}
+	.t .MKD{order:95}
+	.t .RWA{order:96}
+	.t .HAI{order:97}
+	.t .BDI{order:98}
+	.t .EQG{order:99}
+	.t .SOL{order:100}
+	.t .ALB{order:101}
+	.t .MDA{order:102}
+	.t .ARM{order:103}
+	.t .LES{order:104}
+	.t .BEL{order:105}
+	.t .TPE{order:106}
+	.t .GNB{order:107}
+	.t .SUI{order:108}
+	.t .NED{order:109}
+	.t .DEN{order:110}
+	.t .EST{order:111}
+	.t .BHU{order:112}
+	.t .DOM{order:113}
+	.t .SVK{order:114}
+	.t .CRC{order:115}
+	.t .BIH{order:116}
+	.t .CRO{order:117}
+	.t .TOG{order:118}
+	.t .GEO{order:119}
+	.t .LVA{order:120}
+	.t .LTU{order:121}
+	.t .SRI{order:122}
+	.t .IRL{order:123}
+	.t .SLE{order:124}
+	.t .AZE{order:125}
+	.t .SRB{order:126}
+	.t .PAN{order:127}
+	.t .CZE{order:128}
+	.t .UAE{order:129}
+	.t .AUT{order:130}
+	.t .GYF{order:131}
+	.t .POR{order:132}
+	.t .JOR{order:133}
+	.t .HUN{order:134}
+	.t .KOR{order:135}
+	.t .ISL{order:136}
+	.t .GUA{order:137}
+	.t .CUB{order:138}
+	.t .BUL{order:139}
+	.t .LBR{order:140}
+	.t .HON{order:141}
+	.t .BEN{order:142}
+	.t .MWI{order:143}
+	.t .PRK{order:144}
+	.t .ERI{order:145}
+	.t .NCA{order:146}
+	.t .GRE{order:147}
+	.t .NEP{order:148}
+	.t .TJK{order:149}
+	.t .BAN{order:150}
+	.t .SUR{order:151}
+	.t .TUN{order:152}
+	.t .URU{order:153}
+	.t .CAM{order:154}
+	.t .SYR{order:155}
+	.t .SEN{order:156}
+	.t .KGZ{order:157}
+	.t .BLR{order:158}
+	.t .GUY{order:159}
+	.t .UGA{order:160}
+	.t .LAO{order:161}
+	.t .ROU{order:162}
+	.t .GHA{order:163}
+	.t .GBR{order:164}
+	.t .GUI{order:165}
+	.t .SAH{order:166}
+	.t .GAB{order:167}
+	.t .NZL{order:168}
+	.t .BFA{order:169}
+	.t .ECU{order:170}
+	.t .PHI{order:171}
+	.t .ITA{order:172}
+	.t .OMA{order:173}
+	.t .POL{order:174}
+	.t .CIV{order:175}
+	.t .NOR{order:176}
+	.t .VIE{order:177}
+	.t .MAS{order:178}
+	.t .FIN{order:179}
+	.t .CGO{order:180}
+	.t .GER{order:181}
+	.t .JPN{order:182}
+	.t .ZIM{order:183}
+	.t .PAR{order:184}
+	.t .IRQ{order:185}
+	.t .MAR{order:186}
+	.t .UZB{order:187}
+	.t .SWE{order:188}
+	.t .PNG{order:189}
+	.t .CMR{order:190}
+	.t .TKM{order:191}
+	.t .ESP{order:192}
+	.t .THA{order:193}
+	.t .YEM{order:194}
+	.t .FRA{order:195}
+	.t .UKR{order:196}
+	.t .BOT{order:197}
+	.t .KEN{order:198}
+	.t .MAD{order:199}
+	.t .SSD{order:200}
+	.t .CTA{order:201}
+	.t .SOM{order:202}
+	.t .AFG{order:203}
+	.t .MYA{order:204}
+	.t .ZAM{order:205}
+	.t .CHI{order:206}
+	.t .TUR{order:207}
+	.t .MOZ{order:208}
+	.t .PAK{order:209}
+	.t .NAM{order:210}
+	.t .VEN{order:211}
+	.t .NGA{order:212}
+	.t .TAN{order:213}
+	.t .EGY{order:214}
+	.t .MTN{order:215}
+	.t .BOL{order:216}
+	.t .ETH{order:217}
+	.t .COL{order:218}
+	.t .RSA{order:219}
+	.t .MLI{order:220}
+	.t .ANG{order:221}
+	.t .NIG{order:222}
+	.t .CHA{order:223}
+	.t .PER{order:224}
+	.t .MGL{order:225}
+	.t .IRN{order:226}
+	.t .LBY{order:227}
+	.t .SUD{order:228}
+	.t .IDN{order:229}
+	.t .MEX{order:230}
+	.t .KSA{order:231}
+	.t .GRL{order:232}
+	.t .COD{order:233}
+	.t .ALG{order:234}
+	.t .KAZ{order:235}
+	.t .ARG{order:236}
+	.t .IND{order:237}
+	.t .AUS{order:238}
+	.t .BRA{order:239}
+	.t .USA{order:240}
+	.t .CHN{order:241}
+	.t .CAN{order:242}
+	.t .ATA{order:243}
+	.t .RUS{order:244}
+
+/*	 Сортировка Я-А 	*/
+.Z rows-wrap { flex-direction: column-reverse; }
+
+
+/*	АДАПТИВНОСТЬ	*/
+@media screen and (max-width: 1000px) {
+	table-flex { margin: 15px; }
+}
+
+@media screen and (max-width: 800px) {
+	table-flex { margin: 5px 12px 12px; }
+	table-head span::after { margin-left: 2px; }
+	row { font-size: 15px; }
+	c {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+	c:nth-child(1) { padding-left: 14px; }
+	c:nth-child(3) { min-width: 98px; }
+	c:nth-child(4) {
+		padding-left: 0;
+		min-width: 108px;
+	}
+	c:nth-child(5) {
+		padding-left: 0;
+		padding-right: 14px;
+		min-width: 100px;
+	}
+}
+
+@media screen and (max-width: 660px) {
+	table-flex { margin: 5px 0 0; }
+	table-head c { font-size: 12px; }
+	table-head span::after {
+		width: 16px;
+		height: 10px;
+		margin-left: 0;
+		background-position: 5px 0;
+	}
+	.s.Z #strana span::after,
+	.o.Z #stolica span::after,
+	.continent__z-a #continent span::after,
+	.naselenie__z-a #naselenie span::after,
+	.terra__z-a #terra span::after { background-position: 110% -25%; }
+	rows-wrap { border-radius: 0; }
+	row { font-size: 14px; }
+	c { padding: 7px 10px 9px; }
+	c:nth-child(1) { padding-left: 12px; }
+	c:nth-child(3) { min-width: 94px; }
+	c:nth-child(5) { padding-right: 12px; min-width: 108px;}
+}

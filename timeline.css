@@ -1,0 +1,213 @@
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');*/
+
+body, div, i, row, l {
+	box-sizing: border-box;
+}
+html {font-size: 2px;}
+body {
+	margin: 0;
+	padding: 16px;
+	font-family: 'Open Sans', sans-serif;
+	background: #E8EAF6;
+	cursor: default;
+	user-select: none;
+}
+h1 {
+	font-size: 40px;
+	text-align: center;
+	color: #333;
+	margin-top: 0;
+}
+a {
+	color: inherit;
+	text-decoration: none;	
+}
+
+l {
+	width: 0;
+	position: relative;
+	font-size: 13px;
+	display: block;
+	height: 22px;
+	line-height: 21px;
+	margin-bottom: 4px;
+	padding: 0 7px;
+	color: royalblue;
+	background: royalblue;
+	border-radius: 4px;
+	transition: color .08s, width .5s;
+}
+l {
+	color: #DDD;
+}
+m {
+	position: absolute;
+	top: 0;
+	right: 8px;
+}
+n {
+	position: absolute;
+	left: 100%;
+	font-size: 13px;
+	color: #333;
+	margin-left: 7px;
+	white-space: nowrap;
+}
+
+/*		Художники		*/
+.cimabue {width: 62rem;}
+.di_buoninsegna {width: 64rem;left: 15rem;}
+.giotto {width: 70rem;left: 27rem;}
+.pietro_lorenzetti {width: 68rem;left: 40rem;}
+.martini {width: 59rem;left: 45rem;}
+.ambrogio_lorenzetti {width: 58rem;left: 50rem;}
+.taddeo_gaddi {width: 76rem;left: 50rem;}
+.del_casentino {width: 61rem;left: 57rem;}
+.di_buonaventure {width: 33rem;left: 58rem;}
+.vitale_da_bologna {width: 60rem;left: 69rem;}
+.di_arpo {width: 60rem;left: 70rem;}
+.nuzi {width: 58rem;left: 75rem;}
+.da_firenze {width: 58rem;left: 79rem;}
+.giottino {width: 49rem;left: 80rem;}
+.de_menabuoi {width: 71rem;left: 80rem;}
+.capanna {width: 25rem;left: 85rem;}
+.da_milano {width: 45rem;left: 85rem;}
+.nicolo_da_bologna {width: 78rem;left: 85rem;}
+.di_fredi {width: 80rem;left: 90rem;}
+.grek {width: 70rem;left: 100rem;}
+.di_simone {width: 20rem;left: 105rem;font-size: 11px;}
+.agnolo_gaddi {width: 51rem;left: 105rem;}
+.di_starnina {width: 59rem;left: 114rem;}
+.di_vannuccio {width: 35rem;left: 116rem;}
+.del_biondo {width: 43rem;left: 116rem;}
+.rublev {width: 68rem;left: 120rem;}
+.di_bartolo {width: 60rem;left: 122rem;}
+.monaco {width: 55rem;left: 130rem;}
+.da_fabriano {width: 57rem;left: 130rem;}
+.da_verona {width: 63rem;left: 135rem;}
+.campin {width: 69rem;left: 135rem;}
+.del_mazza {width: 15rem;left: 137rem;font-size: 9px;padding: 0 4px;}
+.angelico {width: 68rem;left: 147rem;}
+.van_eyck {width: 46rem;left: 155rem;}
+.van_der_weyden {width: 64rem;left: 160rem;}
+.bellini {width: 70rem;left: 160rem;}
+.bouts_elder {width: 75rem;left: 160rem;}
+.di_paolo {width: 80rem;left: 163rem;}
+.huguet {width: 77rem;left: 175rem;}
+.da_messina {width: 49rem;left: 190rem;}
+.memling {width: 54rem;left: 200rem;}
+.dionysius {width: 62rem;left: 200rem;}
+.gallego {width: 67rem;left: 200rem;}
+.botticelli {width: 65rem;left: 205rem;}
+.bosch {width: 66rem;left: 210rem;}
+.da_vinci {width: 67rem;left: 212rem;}
+.david {width: 63rem;left: 220rem;}
+.di_cosimo {width: 60rem;left: 222rem;}
+.cranach_elder {width: 81rem;left: 232rem;}
+.buonarroti {width: 89rem;left: 235rem;}
+.giorgione {width: 33rem;left: 237rem;}
+.altdorfer {width: 58rem;left: 240rem;}
+.santi {width: 37rem;font-size: 11px;left: 243rem;}
+.grien {width: 61rem;left: 244rem;}
+.patinir {width: 39rem;left: 245rem;font-size: 11px;}
+.van_cleve {width: 55rem;left: 245rem;}
+.vecellio {width: 88rem;left: 248rem;}
+.van_reymerswaele {width: 77rem;left: 250rem;}
+.holbein_younger {width: 46rem;left: 257rem;}
+.aldegrever {width: 59rem;left: 262rem;}
+.met_de_bles {width: 40rem;left: 270rem;font-size: 11px;}
+.cranach_younger {width: 71rem;left: 275rem;}
+.bruegel_elder {width: 44rem;left: 285rem;}
+.greco {width: 73rem;left: 301rem;}
+.brueghel_younger {width: 74rem;left: 324rem;}
+.brueghel_elder {width: 57rem;left: 328rem;}
+.bosschaert_elder {width: 48rem;left: 333rem;}
+.van_dyck {width: 76rem;left: 335rem;}
+.savery {width: 53rem;left: 336rem;}
+.rubens {width: 63rem;left: 337rem;}
+.snyders {width: 78rem;left: 339rem;}
+.beert {width: 44rem;left: 340rem;}
+.peeters {width: 77rem;left: 340rem;}
+.adriaenssen {width: 74rem;left: 347rem;}
+.van_den_berghe {width: 38rem;font-size: 11px;left: 350rem;}
+.van_schooten {width: 65rem;left: 350rem;}
+.claesz_i {width: 44rem;left: 352rem;}
+.koets {width: 62rem;left: 352rem;}
+.van_der_ast {width: 64rem;left: 353rem;}
+.claesz_heda {width: 87rem;left: 353rem;}
+.poussin {width: 71rem;left: 354rem;}
+.gillis {width: 37rem;font-size: 11px;left: 355rem;}
+.claesz {width: 65rem;left: 356rem;}
+.zurbaran {width: 66rem;left: 358rem;}
+.velazquez {width: 61rem;left: 359rem;}
+.bollongier {width: 45rem;left: 360rem;}
+.jan_brueghel_younger {width: 77rem;left: 361rem;}
+.ykens {width: 92rem;left: 361rem;}
+.de_fiori {width: 70rem;left: 363rem;}
+.bosschaert {width: 23rem;left: 366rem;}
+.treck {width: 46rem;left: 366rem;}
+.van_rijn {width: 63rem;left: 366rem;}
+.jan_de_heem {width: 78rem;left: 366rem;}
+.hollar {width: 70rem;left: 367rem;}
+.bosschaert_younger {width: 36rem;font-size: 11px;left: 369rem;}
+.goedaer {width: 51rem;left: 377rem;}
+.both {width: 34rem;font-size: 11px;left: 378rem;}
+.gillemans_elder {width: 57rem;left: 378rem;}
+.van_de_velde_iii {width: 44rem;left: 379rem;}
+.van_schrieck {width: 59rem;left: 379rem;}
+.kalf {width: 74rem;left: 379rem;}
+.berchem {width: 63rem;left: 380rem;}
+.van_beijeren {width: 70rem;left: 380rem;}
+.cuyp {width: 71rem;left: 380rem;}
+.nellius {width: 98rem;left: 381rem;}
+.van_son {width: 45rem;left: 382rem;}
+.willemsz_heda {width: 24rem;left: 385rem;}
+.galle {width: 54rem;left: 385rem;}
+.lelienbergh {width: 50rem;left: 386rem;}
+.van_aelst {width: 57rem;left: 386rem;}
+.van_oosterwijk {width: 63rem;left: 390rem;}
+.cornelis_de_heem {width: 64rem;left: 391rem;}
+.delft {width: 43rem;left: 392rem;}
+.kick {width: 49rem;left: 392rem;}
+.van_streeck {width: 55rem;left: 392rem;}
+.striep {width: 39rem;font-size: 11px;left: 394rem;}
+.monnoyer {width: 65rem;left: 394rem;}
+.de_bray {width: 59rem;left: 395rem;}
+.van_gelder {width: 40rem;font-size: 11px;left: 396rem;}
+.mignon {width: 39rem;font-size: 11px;left: 400rem;}
+.van_thielen {width: 66rem;left: 400rem;}
+.weenix {width: 77rem;left: 402rem;}
+.van_walscapelle {width: 83rem;left: 404rem;}
+.van_den_broeck {width: 62rem;left: 409rem;}
+.ruysch {width: 86rem;left: 424rem;}
+.van_kouwenbergh {width: 58rem;left: 431rem;}
+.van_huysum {width: 67rem;left: 442rem;}
+.watteau {width: 37rem;font-size: 11px;left: 444rem;}
+.casteels_iii {width: 65rem;left: 444rem;}
+.boucher {width: 67rem;left: 463rem;}
+.fragonard {width: 74rem;left: 492rem;}
+.jan_van_os {width: 64rem;left: 504rem;}
+.goya {width: 82rem;left: 506rem;}
+.parra {width: 66rem;left: 540rem;}
+.ingres {width: 87rem;left: 540rem;}
+.van_os {width: 79rem;left: 542rem;}
+.brandt {width: 33rem;font-size: 10px;left: 548rem;}
+.petter {width: 75rem;left: 551rem;}
+.bryullov {width: 53rem;left: 559rem;}
+.rethel {width: 43rem;left: 576rem;}
+.moreau {width: 72rem;left: 586rem;}
+.hughes {width: 83rem;left: 592rem;}
+.degas {width: 83rem;left: 594rem;}
+.beraud {width: 87rem;left: 608rem;}
+.van_gogh {width: 37rem;font-size: 11px;left: 613rem;}
+.galien-laloue {width: 87rem;left: 614rem;}
+.godward {width: 61rem;left: 621rem;}
+.klimt {width: 56rem;left: 622rem;}
+.picasso {width: 92rem;left: 641rem;}
+.cortes {width: 77rem;left: 652rem;}
+.magritte {width: 69rem;left: 658rem;}
+.dali {width: 85rem;left: 664rem;}
+.kennedy {width: 92rem;left: 665rem;}
+.bak {width: 50rem;left: 721rem;text-align: center;}
+.mocafico {width: 50rem;left: 722rem;text-align: center;}
+.mocafico n {padding-right: 30px;}
