@@ -1,3 +1,3 @@
 # Artists Life Timeline
  
-## [смотреть](https://meltten.github.io/Artists-Life-Timeline/)
+## [смотреть](https://markgraaf-van-lottum.github.io/Artists-Life-Timeline/)
